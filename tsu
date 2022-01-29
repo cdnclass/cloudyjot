@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Initialize our venv if it wasn't already setup
+if [ ! -f venv/bin/python ]; then
+  python3 src/cli/init.py
+fi
+
+venv/bin/python src/cli/tsu.py "$@"
